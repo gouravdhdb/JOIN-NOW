@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Love - Minecraft Panel</title>
+    <title>Decken Gamer - Minecraft join</title>
     <link rel="stylesheet" href="gp.css">
 </head>
 <body>
@@ -19,10 +18,11 @@
                 <option value="creative">Creative</option>
                 <option value="skyblock">Skyblock</option>
             </select><br><br>
+
+
             
             <button type="submit">Join Now!</button>
         </form>
     </div>
 </body>
 </html>
-
