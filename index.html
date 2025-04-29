@@ -13,17 +13,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Hello Love ❤️</h1>
-        <form method="POST" action="#">
-            <label for="username">Enter your Minecraft Name:</label><br>
-            <input type="text" id="username" name="username" placeholder="Steve123" required><br><br>
-            
-            <label for="server">Select your Server:</label><br>
-            <select id="server" name="server" required>
-                <option value="survival">Survival</option>
-                <option value="creative">Creative</option>
-                <option value="skyblock">Skyblock</option>
-            </select><br><br>
+        <h1>Welcome to Decken Gamer ❤️</h1>
+        <form id="joinForm">
+    <label for="username">Enter your Minecraft Name:</label><br>
+    <input type="text" id="username" name="username" placeholder="Steve123" required><br><br>
+    
+    <label for="server">Select your Server:</label><br>
+    <select id="server" name="server" required>
+        <option value="survival">Survival</option>
+        <option value="creative">Creative</option>
+        <option value="skyblock">Skyblock</option>
+    </select><br><br>
+    
+    <button type="submit">Join Now!</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+  document.getElementById('joinForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent real submission
+    const username = document.getElementById('username').value;
+    const server = document.getElementById('server').value;
+    
+    document.getElementById('message').innerHTML =
+      `<p><strong>Saved Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
+    
+    // Optionally store it in browser storage
+    localStorage.setItem('minecraft_user', JSON.stringify({ username, server }));
+  });
+</script>
+
             
             <button type="submit">Join Now!</button>
         </form>
