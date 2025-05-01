@@ -11,13 +11,13 @@
   <div class="container">
     <h1>Welcome to Decken Gamer ❤️</h1>
 
-    <form id="joinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeeInwV88t0sNPT2SBsyvTyqcL-qLnywCFFdf6dH0FY6hq-ug/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
       
       <label for="username">Enter your Minecraft Name:</label><br>
-      <input type="text" name="entry.792168027" id="username" placeholder="Steve123" required><br><br>
+      <input type="text" name="entry.123456789" id="username" placeholder="Steve123" required><br><br>
 
       <label for="server">Select your Server:</label><br>
-      <select name="entry.648104717" id="server" required>
+      <select name="entry.987654321" id="server" required>
         <option value="Survival">Survival</option>
         <option value="Creative">Creative</option>
         <option value="Skyblock">Skyblock</option>
@@ -32,16 +32,22 @@
 
     <script>
       let submitted = false;
-      document.getElementById('joinForm').addEventListener('submit', function () {
+      document.getElementById('joinForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent real form submission
         submitted = true;
+
+        const username = document.getElementById('username').value;
+        const server = document.getElementById('server').value;
+        
+        // Show success message
+        document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
+
+        // Optionally, reset the form
         setTimeout(() => {
           if (submitted) {
-            const username = document.getElementById('username').value;
-            const server = document.getElementById('server').value;
-            document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
             document.getElementById('joinForm').reset();
           }
-        }, 1000);
+        }, 2000);
       });
     </script>
   </div>
