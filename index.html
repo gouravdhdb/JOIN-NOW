@@ -11,7 +11,7 @@
   <div class="container">
     <h1>Welcome to Decken Gamer ❤️</h1>
 
-    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST" onsubmit="showSuccessMessage();">
+    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST">
       
       <label for="username">Enter your Minecraft Name:</label><br>
       <input type="text" name="entry.123456789" id="username" placeholder="Steve123" required><br><br>
@@ -26,17 +26,6 @@
       <button type="submit">Join Now!</button>
     </form>
 
-    <div id="message" style="margin-top: 15px;"></div>
-
-    <script>
-      function showSuccessMessage() {
-        const username = document.getElementById('username').value;
-        const server = document.getElementById('server').value;
-
-        // Show success message
-        document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
-      }
-    </script>
   </div>
 </body>
 </html>
