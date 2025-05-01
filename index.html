@@ -1,49 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
+<head><div class="container">
+    <h1>Welcome to Decken Gamer ❤️</h1>
+  </div>
+<body>
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hello Love - Minecraft Panel</title>
   <link rel="stylesheet" href="gp.css" />
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeInwV88t0sNPT2SBsyvTyqcL-qLnywCFFdf6dH0FY6hq-ug/viewform?embedded=true" width="640" height="594" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to Decken Gamer ❤️</h1>
-
-    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-      
-      <label for="username">Enter your Minecraft Name:</label><br>
-      <input type="text" name="entry.123456789" id="username" placeholder="Steve123" required><br><br>
-
-      <label for="server">Select your Server:</label><br>
-      <select name="entry.987654321" id="server" required>
-        <option value="Survival">Survival</option>
-        <option value="Creative">Creative</option>
-        <option value="Skyblock">Skyblock</option>
-      </select><br><br>
-
-      <button type="submit">Join Now!</button>
-    </form>
-
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-    <div id="message" style="margin-top: 15px;"></div>
-
-    <script>
-      let submitted = false;
-      document.getElementById('joinForm').addEventListener('submit', function () {
-        submitted = true;
-        setTimeout(() => {
-          if (submitted) {
-            const username = document.getElementById('username').value;
-            const server = document.getElementById('server').value;
-            document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
-            document.getElementById('joinForm').reset();
-          }
-        }, 1000);
-      });
-    </script>
-  </div>
 </body>
 </html>
