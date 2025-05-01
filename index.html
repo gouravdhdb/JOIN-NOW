@@ -11,7 +11,7 @@
   <div class="container">
     <h1>Welcome to Decken Gamer ❤️</h1>
 
-    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <form id="joinForm" action="https://docs.google.com/forms/d/e/1W8gU8XA1GqFtXdDOI4ZNQvd4RnebaGm9HN5dAMlTQM8/formResponse" method="POST" onsubmit="showSuccessMessage();">
       
       <label for="username">Enter your Minecraft Name:</label><br>
       <input type="text" name="entry.123456789" id="username" placeholder="Steve123" required><br><br>
@@ -26,30 +26,16 @@
       <button type="submit">Join Now!</button>
     </form>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
     <div id="message" style="margin-top: 15px;"></div>
 
     <script>
-      let submitted = false;
-      document.getElementById('joinForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent real form submission
-        
-        // Display a success message
+      function showSuccessMessage() {
         const username = document.getElementById('username').value;
         const server = document.getElementById('server').value;
 
-        // Display success message
+        // Show success message
         document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
-
-        // Optionally reset the form
-        setTimeout(() => {
-          document.getElementById('joinForm').reset();
-        }, 2000);
-        
-        // Submit form after showing the success message
-        document.getElementById('joinForm').submit();
-      });
+      }
     </script>
   </div>
 </body>
