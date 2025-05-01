@@ -34,20 +34,21 @@
       let submitted = false;
       document.getElementById('joinForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent real form submission
-        submitted = true;
-
+        
+        // Display a success message
         const username = document.getElementById('username').value;
         const server = document.getElementById('server').value;
-        
-        // Show success message
+
+        // Display success message
         document.getElementById('message').innerHTML = `<p><strong>✅ Joined Successfully!</strong><br>Username: ${username}<br>Server: ${server}</p>`;
 
-        // Optionally, reset the form
+        // Optionally reset the form
         setTimeout(() => {
-          if (submitted) {
-            document.getElementById('joinForm').reset();
-          }
+          document.getElementById('joinForm').reset();
         }, 2000);
+        
+        // Submit form after showing the success message
+        document.getElementById('joinForm').submit();
       });
     </script>
   </div>
